@@ -96,3 +96,82 @@ const codigo = "ABC"
 const codigoPreenchido = codigo.padStart(5, "-");
 console.log(codigoPreenchido);
 
+// split
+const texto = "Essa é uma string com espaços em branco";
+// divide a string em um array de letras usando espaços como separadores
+const letras = texto.split("")
+console.log(letras);
+// divide a string em um array de números usando vírgulas como separadores
+const numeros2 = "1,2,3,4,5".split("");
+console.log(numeros2);
+
+// divide a string em uma array de 8 elementos, usando espaços como separadores
+const partes = texto.split(" ",8)
+console.log(partes)
+
+// join 
+const numerosJoin = [1,2,3,4,5];
+// transforma o array em uma string, acrescentando a vírgula
+const listaNumeros = numerosJoin.join();
+console.log(numerosJoin)
+console.log(listaNumeros)
+console.log(typeof listaNumeros)
+
+
+// junta os números com traços como separador
+const listaNumerosTracos = numerosJoin.join("-");
+console.log(listaNumerosTracos)
+
+
+// 
+const frutas = ["maçã","banana","laranja"]
+const textoFrutas = frutas.join(" e ")
+console.log(textoFrutas)
+
+// repeat
+const testandoRepeat = " Olá";
+// repetindo a string 3 vezes
+const textoRepetido = testandoRepeat.repeat(3)
+console.log(textoRepetido)
+
+// repetindo a string 0 vezes
+const textoVazio = testandoRepeat.repeat(0)
+console.log(textoVazio)
+
+// rest operator
+function minhaFuncao(a,b, ...args){
+    console.log(a)
+    console.log(b)
+    console.log(args)
+}
+
+minhaFuncao(1,2,3,4,5,6)
+
+
+// iterando sobre um array
+const frutasA = ["maçã","uva","melância"]
+
+for(const fruta of frutasA){
+    console.log(fruta);
+}
+
+// desestruturando objetos
+const usuario = {
+    primeiroNome: "José",
+    sobrenome:"Xavier",
+    profissao:"Pedreiro"
+}
+console.log(usuario)
+
+const[primeiroNome,sobrenome,profissao] = Object.values(usuario);
+console.log(primeiroNome, sobrenome, profissao);
+
+// desestruturando array
+const array = ["João","Maria","Pedro"];
+
+const[primeiro, segundo, terceiro ] = array;
+console.log(primeiro)
+console.log(segundo)
+console.log(terceiro)
+
+
